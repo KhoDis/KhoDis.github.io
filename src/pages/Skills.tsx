@@ -1,4 +1,4 @@
-import { Badge } from "../components/Badge.tsx";
+import Badge from "../components/Badge.tsx";
 
 const frameworks = [
   "React", "Redux", "Redux Toolkit", "RTK Query", "redux-undo"
