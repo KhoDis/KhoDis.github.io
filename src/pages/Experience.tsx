@@ -1,3 +1,5 @@
+import Badge from "../components/Badge.tsx";
+
 const projects = [
   {
     title: "Generative Pixel Art (Pet-проект)",
@@ -5,6 +7,7 @@ const projects = [
     link: "https://github.com/KhoDis/generative-pixel-art",
     period: "Сентябрь 2023 по текущий день",
     stack: "React.js, TypeScript, TailwindCSS, DaisyUI, Konva.js, Redux, Jest, Vite",
+    stack: ["React.js", "TypeScript", "TailwindCSS", "DaisyUI", "Konva.js", "Redux", "Jest", "Vite"],
   },
   {
     title: "Веб-сайт с онлайн пазлами",
@@ -12,6 +15,7 @@ const projects = [
     link: "https://github.com/puzzle-online/puzzle-online",
     period: "Март 2023 - Апрель 2023",
     stack: "React, TS, MUI, WebSocket, Ktor",
+    stack: ["React", "TS", "MUI", "WebSocket", "Ktor"],
   },
   {
     title: "Приложение для хранения заметок",
@@ -19,6 +23,7 @@ const projects = [
     link: "https://github.com/Curo-app",
     period: "Март 2023 - Август 2023",
     stack: "Jetpack Compose, SQLite, Exposed",
+    stack: ["Jetpack Compose", "SQLite", "Exposed"],
   },
   {
     title: "Task Manager (Pet-проект)",
@@ -48,16 +53,7 @@ const experiences = [
     description: `Разработал фронтенд для анализа FORC кривых с двухнедельными спринтами в паре с другим фронтенд разработчиком. Практика в университете в качестве опыта работы над реальным проектом в ООО "Судо".`,
     stack: "React, TypeScript, Vite, MathJax, MUI",
     link: "https://dev.forctool.com/",
-  },
-];
-
-const education = [
-  {
-    institution: "ИТМО",
-    degree: "Бакалавр в Кафедре Технологий (ПМИ, 01.03.02)",
-    period: "Сентябрь 2020 по текущий день",
-    location: "Санкт-Петербург",
-    link: "https://itmo.ru",
+    stack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "RTK Query", "TailwindCSS", "Node.js", "Express", "MongoDB", "JWT"],
   },
 ];
 
@@ -66,10 +62,9 @@ type TimelineItemProps = {
   title: string;
   location?: string;
   description: string;
-  stack?: string;
+  stack?: string[];
   link: string;
   flip?: boolean;
-  color?: string;
 }
 
 const TimelineItem = ({ time, title, location, description, stack, link, flip }: TimelineItemProps) => (
@@ -94,9 +89,11 @@ const TimelineItem = ({ time, title, location, description, stack, link, flip }:
       <div className="text-md mb-2">{location}</div>
       <p className="text-md mb-2">{description}</p>
       {stack && (
-        <p className="text-md mb-2">
-          <strong>Стек:</strong> {stack}
-        </p>
+        <ul className={`flex flex-wrap ${flip && "flex-row-reverse"} gap-2 mb-2`}>
+          {stack.map((skill, index) => (
+            <Badge key={index} skill={skill} />
+          ))}
+        </ul>
       )}
       {link && (
         <p>
