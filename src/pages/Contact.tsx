@@ -5,8 +5,8 @@ function Contact() {
         <h2 className="text-2xl font-bold mb-4">Contact</h2>
         <p>
           If you would like to get in touch, please send me an email at{" "}
-          <a href="mailto:your-email@example.com" className="text-primary">
-            your-email@example.com
+          <a href="mailto:khodzhayarov.a@gmail.com" className="text-primary">
+            khodzhayarov.a@gmail.com
           </a>
         </p>
       </div>
