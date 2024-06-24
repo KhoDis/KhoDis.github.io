@@ -1,38 +1,42 @@
 import Badge from "../components/Badge.tsx";
 
 const frameworks = [
-  "React", "Redux", "Redux Toolkit", "RTK Query", "redux-undo"
+  "React",
+  "Redux",
+  "Redux Toolkit",
+  "RTK Query",
+  "redux-undo",
 ];
 
-const visualLibraries = [
-  "Konva", "PIXI.js"
-];
+const visualLibraries = ["Konva", "PIXI.js"];
 
-const technologies = [
-  "WebSocket", "Next.js", "Vite"
-];
+const technologies = ["WebSocket", "Next.js", "Vite"];
 
-const versionControl = [
-  "git", "GitHub", "GitLab"
-];
+const versionControl = ["git", "GitHub", "GitLab"];
 
-const cssFrameworks = [
-  "CSS", "SCSS", "TailwindCSS", "DaisyUI", "MUI"
-];
+const cssFrameworks = ["CSS", "SCSS", "TailwindCSS", "DaisyUI", "MUI"];
 
-const languages = [
-  "JavaScript", "TypeScript"
-];
+const languages = ["JavaScript", "TypeScript"];
 
-const tests = [
-  "Jest"
-];
+const tests = ["Jest"];
 
 const otherTechnologies = [
-  "Figma", "Java (+Spring)", "Kotlin (+Ktor)", "PostgreSQL", "C++", "Python", "SQLite"
+  "Figma",
+  "Java (+Spring)",
+  "Kotlin (+Ktor)",
+  "PostgreSQL",
+  "C++",
+  "Python",
+  "SQLite",
 ];
 
-const SkillSection = ({ title, skills }: { title: string, skills: string[] }) => (
+const SkillSection = ({
+  title,
+  skills,
+}: {
+  title: string;
+  skills: string[];
+}) => (
   <div className="mb-6">
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <ul className="flex flex-wrap gap-2">

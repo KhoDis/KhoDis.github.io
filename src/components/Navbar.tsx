@@ -4,14 +4,18 @@ function Logo() {
   return <h1 className="text-3xl font-bold">Adis Khodzhayarov</h1>;
 }
 
-function NavLinks({ handleStyles }: { handleStyles?: ({ isActive }: { isActive: boolean }) => string }) {
+function NavLinks({
+  handleStyles,
+}: {
+  handleStyles?: ({ isActive }: { isActive: boolean }) => string;
+}) {
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Me" },
     { to: "/skills", label: "Skills" },
     { to: "/experience", label: "Experience" },
     { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" }
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
