@@ -20,7 +20,7 @@ const projects = [
       "Jest",
       "Vite",
     ],
-    image: "pixels.png",
+    image: "pixels.gif",
   },
   {
     title: "Веб-сайт с онлайн пазлами",
@@ -44,15 +44,26 @@ const projects = [
     stack: ["Jetpack Compose", "SQLite", "Exposed"],
     image: "curo.jpg",
   },
-  // {
-  //   title: "Task Manager (Pet-проект)",
-  //   description: ["Разработал полнофункциональное приложение для управления задачами с аутентификацией и авторизацией.", "Фронтенд: Использовал Next.js, React, TypeScript, Redux Toolkit, RTK Query и Tailwind CSS", "Бэкенд: Построил REST API с Node.js, Express и MongoDB", "Реализовал JWT для защиты маршрутов и аутентификации пользователей."],
-  //   link: "https://github.com/KhoDis/task-manager",
-  //   period: "Май 2024",
-  //   stack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "RTK Query", "TailwindCSS", "Node.js", "Express", "MongoDB", "JWT"],
-  //   image: "https://example.com/path-to-image-or-gif.gif"
-  // },
-  // TODO: movie app
+  {
+    title: "Task Manager (Pet-проект)",
+    description: ["Разработал полнофункциональное приложение для управления задачами с аутентификацией и авторизацией.", "Фронтенд: Использовал Next.js, React, TypeScript, Redux Toolkit, RTK Query и Tailwind CSS", "Бэкенд: Построил REST API с Node.js, Express и MongoDB", "Реализовал JWT для защиты маршрутов и аутентификации пользователей."],
+    link: "https://github.com/KhoDis/task-manager",
+    period: "Май 2024",
+    stack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "RTK Query", "TailwindCSS", "Node.js", "Express", "MongoDB", "JWT"],
+    image: "tasker.gif"
+  },
+  {
+    title: "Movie App",
+    description: [
+      "Приложение для просмотра информации о фильмах с использованием React, TypeScript и API Кинопоиска.",
+      "Отображение списка фильмов, фильтрация фильмов, просмотр детальной информации о фильме.",
+      "Добавление фильмов в избранное с персистентностью."
+    ],
+    link: "https://github.com/KhoDis/movie-app/",
+    period: "Июнь 2024",
+    stack: ["Vite", "React", "TS", "Redux", "Redux Toolkit", "RTK Query", "redux-persist", "MUI", "React Router"],
+    image: "movies.png"
+  }
 ];
 
 type TimelineItemProps = {

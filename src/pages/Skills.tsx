@@ -6,6 +6,7 @@ const frameworks = [
   "Redux Toolkit",
   "RTK Query",
   "redux-undo",
+  "React Router"
 ];
 
 const visualLibraries = ["Konva", "PIXI.js"];
