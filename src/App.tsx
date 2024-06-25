@@ -28,7 +28,7 @@ function App() {
       <div className="container sticky top-0 z-[1]">
         <Navbar />
       </div>
-      <div className="container flex-grow">
+      <div className="container flex-grow p-4">
         <Content />
       </div>
     </div>

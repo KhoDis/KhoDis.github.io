@@ -103,31 +103,6 @@ const Projects = () => {
           />
         ))}
       </ul>
-      {/*<ul className="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact">*/}
-      {/*  {education.map((edu, index) => (*/}
-      {/*    <TimelineItem*/}
-      {/*      key={index}*/}
-      {/*      time={edu.period}*/}
-      {/*      title={edu.institution}*/}
-      {/*      location={edu.location}*/}
-      {/*      description={edu.degree}*/}
-      {/*      link={edu.link}*/}
-      {/*    />*/}
-      {/*  ))}*/}
-      {/*</ul>*/}
-      {/*<ul className="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact">*/}
-      {/*  {experiences.map((exp, index) => (*/}
-      {/*    <TimelineItem*/}
-      {/*      key={index}*/}
-      {/*      time={exp.period}*/}
-      {/*      title={`${exp.company} - ${exp.role}`}*/}
-      {/*      location={exp.location}*/}
-      {/*      description={exp.description}*/}
-      {/*      stack={exp.stack}*/}
-      {/*      link={exp.link}*/}
-      {/*    />*/}
-      {/*  ))}*/}
-      {/*</ul>*/}
     </section>
   );
 };
