@@ -12,9 +12,10 @@ function NavLinks({
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Me" },
-    { to: "/skills", label: "Skills" },
+    { to: "/education", label: "Education" },
     { to: "/experience", label: "Experience" },
     { to: "/projects", label: "Projects" },
+    { to: "/skills", label: "Skills" },
     { to: "/contact", label: "Contact" },
   ];
 

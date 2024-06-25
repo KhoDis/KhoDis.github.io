@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound.tsx";
 import Experience from "./pages/Experience.tsx";
+import Education from "./pages/Education.tsx";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/experience" element={<Experience />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/education" element={<Education />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
