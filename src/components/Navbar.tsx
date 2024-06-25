@@ -25,26 +25,18 @@ function NavLinks({
   );
 }
 
-function SmallCenter() {
-  return <Logo />;
-}
-
-function BigCenter() {
+function BigNav() {
   const handleStyles = ({ isActive }: { isActive: boolean }) =>
-    `btn btn-ghost ${isActive ? "btn-active" : ""}`;
+    `btn btn-md btn-ghost ${isActive ? "btn-active" : ""}`;
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex gap-2">
       <NavLinks handleStyles={handleStyles} />
     </div>
   );
 }
 
-function BigStart() {
-  return <Logo />;
-}
-
-function SmallStart() {
+function Menu() {
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
@@ -79,18 +71,19 @@ function Navbar() {
   return (
     <nav className="navbar p-4 shadow-lg bg-primary rounded-b-2xl">
       <div className="navbar-start hidden lg:flex text-white">
-        <BigStart />
+        <Logo />
       </div>
       <div className="navbar-start lg:hidden">
-        <SmallStart />
+        <Menu />
       </div>
-      <div className="navbar-center hidden lg:flex text-white">
-        <BigCenter />
-      </div>
+      <div className="navbar-center hidden lg:flex text-white"/>
       <div className="navbar-center lg:hidden text-white">
-        <SmallCenter />
+        <Logo />
       </div>
-      <div className="navbar-end"></div>
+      <div className="navbar-end hidden lg:flex text-white">
+        <BigNav />
+      </div>
+      <div className="navbar-end lg:hidden text-white"/>
     </nav>
   );
 }
