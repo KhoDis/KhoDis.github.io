@@ -21,13 +21,13 @@ const EducationHero = ({
   image,
 }: EducationProps) => (
   <div className="hero">
-    <div className="hero-content flex-col md:flex-row items-start">
+    <div className="hero-content flex-col md:flex-row items-start gap-4">
       <img
         src={image}
-        className="md:max-w-sm rounded-lg shadow-2xl border"
+        className="md:max-w-sm rounded-lg shadow-md border"
         alt={institution}
       />
-      <div className="ml-8 space-y-4">
+      <div className="space-y-4">
         <h1 className="text-5xl font-bold">{institution}</h1>
         <p>{degree}</p>
         <p>{location}</p>
