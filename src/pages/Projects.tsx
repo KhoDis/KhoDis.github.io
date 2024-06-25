@@ -64,7 +64,7 @@ const TimelineItem = ({
       ))}
       {stack && (
         <ul
-          className={`flex flex-wrap ${flip && "flex-row-reverse"} gap-2 mb-2`}
+          className={`flex flex-wrap ${flip && "md:flex-row-reverse"} gap-2 mb-2`}
         >
           {stack.map((skill, index) => (
             <Badge key={index} skill={skill} />
