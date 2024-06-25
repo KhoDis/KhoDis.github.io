@@ -2,6 +2,7 @@ import Badge from "../components/Badge.tsx";
 import { projects } from "../data.ts";
 
 type TimelineItemProps = {
+  index: number;
   time: string;
   title: string;
   location?: string;
@@ -13,6 +14,7 @@ type TimelineItemProps = {
 };
 
 const TimelineItem = ({
+  index,
   time,
   title,
   location,
@@ -23,7 +25,7 @@ const TimelineItem = ({
   flip,
 }: TimelineItemProps) => (
   <li>
-    <hr className="bg-primary" />
+    {index > 0 && <hr className="bg-primary" />}
     <div className={`${!flip ? "timeline-start md:text-end" : "timeline-end"}`}>
       {image && (
         <div className="my-4">
@@ -93,6 +95,7 @@ const Projects = () => {
         {projects.map((proj, index) => (
           <TimelineItem
             key={index}
+            index={index}
             time={proj.period}
             title={proj.title}
             description={proj.description}
