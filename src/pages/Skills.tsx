@@ -1,40 +1,18 @@
 import Badge from "../components/Badge.tsx";
 
-const frameworks = [
-  "React",
-  "Redux",
-  "Redux Toolkit",
-  "RTK Query",
-  "redux-undo",
-  "React Router"
-];
-
+const languages = ["JavaScript", "TypeScript", "Java (+Spring)", "Kotlin (+Ktor)", "C++", "Python"];
+const frameworks = ["React", "Redux", "Redux Toolkit", "RTK Query", "redux-undo", "React Router", "Next.js"];
 const visualLibraries = ["Konva", "PIXI.js"];
-
-const technologies = ["WebSocket", "Next.js", "Vite"];
-
+const technologies = ["WebSocket", "Vite", "PostgreSQL", "SQLite"];
 const versionControl = ["git", "GitHub", "GitLab"];
-
 const cssFrameworks = ["CSS", "SCSS", "TailwindCSS", "DaisyUI", "MUI"];
-
-const languages = ["JavaScript", "TypeScript"];
-
 const tests = ["Jest"];
-
-const otherTechnologies = [
-  "Figma",
-  "Java (+Spring)",
-  "Kotlin (+Ktor)",
-  "PostgreSQL",
-  "C++",
-  "Python",
-  "SQLite",
-];
+const other = ["Figma"];
 
 const SkillSection = ({
-  title,
-  skills,
-}: {
+                        title,
+                        skills,
+                      }: {
   title: string;
   skills: string[];
 }) => (
@@ -50,18 +28,20 @@ const SkillSection = ({
 
 const Skills = () => {
   return (
-    <section className="flex items-center justify-center container mx-auto">
-      <div className="container mx-auto p-6 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Skills</h2>
-        These are the tools I used to make awesome projects!
-        <SkillSection title="Languages" skills={languages} />
-        <SkillSection title="Frameworks" skills={frameworks} />
-        <SkillSection title="Visual Libraries" skills={visualLibraries} />
-        <SkillSection title="Technologies" skills={technologies} />
-        <SkillSection title="Version Control" skills={versionControl} />
-        <SkillSection title="CSS Frameworks" skills={cssFrameworks} />
-        <SkillSection title="Testing" skills={tests} />
-        <SkillSection title="Other Technologies" skills={otherTechnologies} />
+    <section className="flex items-center justify-center container mx-auto py-12">
+      <div className="">
+        <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
+        <p className="text-lg mb-8 text-center">These are the tools I used to make awesome projects!</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <SkillSection title="Languages" skills={languages} />
+          <SkillSection title="Frameworks" skills={frameworks} />
+          <SkillSection title="Visual Libraries" skills={visualLibraries} />
+          <SkillSection title="Technologies" skills={technologies} />
+          <SkillSection title="Version Control" skills={versionControl} />
+          <SkillSection title="CSS Frameworks" skills={cssFrameworks} />
+          <SkillSection title="Testing" skills={tests} />
+          <SkillSection title="Other" skills={other} />
+        </div>
       </div>
     </section>
   );
