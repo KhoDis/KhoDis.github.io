@@ -24,7 +24,7 @@ const EducationHero = ({
     <div className="hero-content flex-col lg:flex-row items-start">
       <img
         src={image}
-        className="max-w-sm rounded-lg shadow-2xl"
+        className="max-w-sm rounded-lg shadow-2xl border"
         alt={institution}
       />
       <div className="ml-8 space-y-4">

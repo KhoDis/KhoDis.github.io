@@ -22,10 +22,10 @@ const ExperienceCard = ({
   link,
   presentation,
 }: ExperienceProps) => (
-  <div className="card w-full shadow-xl mb-8 md:w-3/4 lg:w-1/2">
+  <div className="card w-full shadow-xl mb-8 md:w-3/4 lg:w-1/2 border">
     <div className="card-body">
       <h2 className="card-title text-primary">
-        {role} at {company}
+        {role} в {company}
       </h2>
       <p className="text-sm text-secondary mb-2">
         {location} | {period}
