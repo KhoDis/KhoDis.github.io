@@ -24,7 +24,7 @@ function App() {
   );
 
   return (
-    <div className="h-screen flex flex-col items-center space-y-2">
+    <div className="h-dvh flex flex-col items-center">
       <div className="container sticky top-0 z-[1]">
         <Navbar />
       </div>
