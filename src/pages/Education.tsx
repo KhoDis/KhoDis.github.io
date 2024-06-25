@@ -21,10 +21,10 @@ const EducationHero = ({
   image,
 }: EducationProps) => (
   <div className="hero">
-    <div className="hero-content flex-col lg:flex-row items-start">
+    <div className="hero-content flex-col md:flex-row items-start">
       <img
         src={image}
-        className="max-w-sm rounded-lg shadow-2xl border"
+        className="md:max-w-sm rounded-lg shadow-2xl border"
         alt={institution}
       />
       <div className="ml-8 space-y-4">

@@ -45,18 +45,18 @@ const SkillSection = ({
 const Skills = () => {
   return (
     <>
-      <p className="text-lg mb-8 text-center">
-        These are the tools I used to make awesome projects!
+      <p className="text-lg mb-4 text-center p-4">
+        Вот инструменты, которыми я пользовался, чтобы создавать классные проекты!
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <SkillSection title="Languages" skills={languages} />
-        <SkillSection title="Frameworks" skills={frameworks} />
-        <SkillSection title="Visual Libraries" skills={visualLibraries} />
-        <SkillSection title="Technologies" skills={technologies} />
-        <SkillSection title="Version Control" skills={versionControl} />
-        <SkillSection title="CSS Frameworks" skills={cssFrameworks} />
-        <SkillSection title="Testing" skills={tests} />
-        <SkillSection title="Other" skills={other} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 lg:w-3/4 mx-auto">
+        <SkillSection title="Языки" skills={languages} />
+        <SkillSection title="Фреймворки" skills={frameworks} />
+        <SkillSection title="Визуальные библиотеки" skills={visualLibraries} />
+        <SkillSection title="Технологии" skills={technologies} />
+        <SkillSection title="Контроль Версий" skills={versionControl} />
+        <SkillSection title="CSS Фреймворки" skills={cssFrameworks} />
+        <SkillSection title="Тестирование" skills={tests} />
+        <SkillSection title="Прочее" skills={other} />
       </div>
     </>
   );

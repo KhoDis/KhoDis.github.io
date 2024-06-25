@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { links } from "../data.ts";
 
 function Logo() {
-  return <h1 className="text-3xl font-bold">Адис Ходжаяров</h1>;
+  return <h1 className="text-2xl lg:text-3xl font-bold">Адис Ходжаяров</h1>;
 }
 
 function NavLinks({

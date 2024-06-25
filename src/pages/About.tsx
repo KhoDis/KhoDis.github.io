@@ -4,10 +4,10 @@ function About() {
   return (
     <section className="flex items-center justify-center">
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row items-start gap-8">
+        <div className="hero-content flex-col md:flex-row items-start gap-8">
           <img
             src="/me.png"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="md:max-w-sm rounded-lg shadow-2xl"
             alt="avatar"
           />
           <div className="space-y-4 lg:w-1/2">
