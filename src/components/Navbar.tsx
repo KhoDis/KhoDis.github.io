@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { links } from "../data.ts";
 
 function Logo() {
   return <h1 className="text-3xl font-bold">Адис Ходжаяров</h1>;
@@ -9,16 +10,6 @@ function NavLinks({
 }: {
   handleStyles?: ({ isActive }: { isActive: boolean }) => string;
 }) {
-  const links = [
-    { to: "/", label: "Домой" },
-    { to: "/about", label: "О себе" },
-    { to: "/education", label: "Образование" },
-    { to: "/experience", label: "Опыт" },
-    { to: "/projects", label: "Проекты" },
-    { to: "/skills", label: "Навыки" },
-    { to: "/contact", label: "Связаться" },
-  ];
-
   return (
     <>
       {links.map((link) => (

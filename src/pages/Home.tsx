@@ -1,14 +1,5 @@
 import { Link } from "react-router-dom";
-
-const links = [
-  { to: "/", label: "Домой" },
-  { to: "/about", label: "О себе" },
-  { to: "/education", label: "Образование" },
-  { to: "/experience", label: "Опыт" },
-  { to: "/projects", label: "Проекты" },
-  { to: "/skills", label: "Навыки" },
-  { to: "/contact", label: "Связаться" },
-];
+import { links } from "../data.ts";
 
 function Home() {
   return (

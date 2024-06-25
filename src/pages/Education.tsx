@@ -1,17 +1,5 @@
 import Section from "../hoс/Section.tsx";
-
-const education = [
-  {
-    institution: "ИТМО",
-    degree: "Бакалавр в Кафедре Технологий (ПМИ, 01.03.02)",
-    period: "Сентябрь 2020 по Август 2024",
-    location: "Санкт-Петербург",
-    link: "https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm",
-    extra:
-      "Из веба получено опыта: СУБД, Java (+Spring), Kotlin, сети, Vue, FreeMarker, JQuery",
-    image: "ITMO.png",
-  },
-];
+import { education } from "../data.ts";
 
 type EducationProps = {
   institution: string;
