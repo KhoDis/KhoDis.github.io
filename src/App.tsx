@@ -4,9 +4,9 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound.tsx";
 import Experience from "./pages/Experience.tsx";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const Content = () => (

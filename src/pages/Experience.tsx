@@ -3,27 +3,46 @@ import Badge from "../components/Badge.tsx";
 const projects = [
   {
     title: "Generative Pixel Art (Pet-проект)",
-    description: ["Разработал веб-сайт для автоматической генерации изображений в стиле Pixel Art.", "Разработал удобный макет приложения.", "Написал тесты, используя Jest, для тестирования функционала функций-генераторов."],
+    description: [
+      "Разработал веб-сайт для автоматической генерации изображений в стиле Pixel Art.",
+      "Разработал удобный макет приложения.",
+      "Написал тесты, используя Jest, для тестирования функционала функций-генераторов.",
+    ],
     link: "https://github.com/KhoDis/generative-pixel-art",
     period: "Сентябрь 2023 по текущий день",
-    stack: ["React.js", "TypeScript", "TailwindCSS", "DaisyUI", "Konva.js", "Redux", "Jest", "Vite"],
-    image: "pixels.png"
+    stack: [
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+      "DaisyUI",
+      "Konva.js",
+      "Redux",
+      "Jest",
+      "Vite",
+    ],
+    image: "pixels.png",
   },
   {
     title: "Веб-сайт с онлайн пазлами",
-    description: ["Разработал фронтенд для сайта для совместного сбора пазлов с синхронизацией между клиентами и сервером с помощью WebSocket."],
+    description: [
+      "Разработал фронтенд для сайта для совместного сбора пазлов с синхронизацией между клиентами и сервером с помощью WebSocket.",
+    ],
     link: "https://github.com/puzzle-online/puzzle-online",
     period: "Март 2023 - Апрель 2023",
     stack: ["React", "TS", "MUI", "WebSocket", "Ktor", "PIXI.js"],
-    image: "puzzles.gif"
+    image: "puzzles.gif",
   },
   {
     title: "Приложение для хранения заметок",
-    description: ["Заняли первое место в конкурсе проектов на курсе Android-разработка от ВК в команде из 4 человек.", "Использовали Figma для создания дизайна приложения, после чего наверстали.", "Верстали с Jetpack Compose, хранили информацию с SQLite и Exposed."],
+    description: [
+      "Заняли первое место в конкурсе проектов на курсе Android-разработка от ВК в команде из 4 человек.",
+      "Использовали Figma для создания дизайна приложения, после чего наверстали.",
+      "Верстали с Jetpack Compose, хранили информацию с SQLite и Exposed.",
+    ],
     link: "https://github.com/Curo-app",
     period: "Март 2023 - Август 2023",
     stack: ["Jetpack Compose", "SQLite", "Exposed"],
-    image: "curo.jpg"
+    image: "curo.jpg",
   },
   // {
   //   title: "Task Manager (Pet-проект)",
@@ -45,15 +64,28 @@ type TimelineItemProps = {
   link: string;
   image?: string;
   flip?: boolean;
-}
+};
 
-const TimelineItem = ({ time, title, location, description, stack, link, image, flip }: TimelineItemProps) => (
+const TimelineItem = ({
+  time,
+  title,
+  location,
+  description,
+  stack,
+  link,
+  image,
+  flip,
+}: TimelineItemProps) => (
   <li>
     <hr className="bg-primary" />
     <div className={`${!flip ? "timeline-start md:text-end" : "timeline-end"}`}>
       {image && (
         <div className="my-4">
-          <img src={image} alt={title} className="w-auto max-h-96 rounded-lg shadow-md" />
+          <img
+            src={image}
+            alt={title}
+            className="w-auto max-h-96 rounded-lg shadow-md"
+          />
         </div>
       )}
     </div>
@@ -62,7 +94,8 @@ const TimelineItem = ({ time, title, location, description, stack, link, image, 
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="text-secondary h-5 w-5">
+        className="text-secondary h-5 w-5"
+      >
         <path
           fillRule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -70,15 +103,21 @@ const TimelineItem = ({ time, title, location, description, stack, link, image, 
         />
       </svg>
     </div>
-    <div className={`timeline-box p-6 rounded-lg shadow-lg bg-white ${flip ? "timeline-start md:text-end" : "timeline-end"}`}>
+    <div
+      className={`timeline-box p-6 rounded-lg shadow-lg bg-white ${flip ? "timeline-start md:text-end" : "timeline-end"}`}
+    >
       <time className="block text-sm mb-2">{time}</time>
       <div className="text-xl font-bold mb-2">{title}</div>
       <div className="text-md mb-2">{location}</div>
       {description.map((paragraph, index) => (
-        <p key={index} className="text-md mb-2">{paragraph}</p>
+        <p key={index} className="text-md mb-2">
+          {paragraph}
+        </p>
       ))}
       {stack && (
-        <ul className={`flex flex-wrap ${flip && "flex-row-reverse"} gap-2 mb-2`}>
+        <ul
+          className={`flex flex-wrap ${flip && "flex-row-reverse"} gap-2 mb-2`}
+        >
           {stack.map((skill, index) => (
             <Badge key={index} skill={skill} />
           ))}
@@ -90,7 +129,8 @@ const TimelineItem = ({ time, title, location, description, stack, link, image, 
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-content hover:underline">
+            className="text-primary-content hover:underline"
+          >
             {link}
           </a>
         </p>
