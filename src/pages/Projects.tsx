@@ -26,13 +26,13 @@ const TimelineItem = ({
 }: TimelineItemProps) => (
   <li>
     {index > 0 && <hr className="bg-primary" />}
-    <div className={`${!flip ? "timeline-start md:text-end" : "timeline-end"}`}>
+    <div className={`${(flip ? "timeline-start md:timeline-end" : "timeline-start md:text-end")}`}>
       {image && (
         <div className="my-4">
           <img
             src={image}
             alt={title}
-            className="w-auto max-h-96 rounded-lg shadow-md"
+            className="w-auto md:max-h-96 rounded-lg shadow-md"
           />
         </div>
       )}
@@ -52,8 +52,9 @@ const TimelineItem = ({
       </svg>
     </div>
     <div
-      className={`timeline-box p-6 rounded-lg shadow-lg bg-white ${flip ? "timeline-start md:text-end" : "timeline-end"}`}
+      className={`timeline-box p-6 rounded-lg shadow-lg bg-white ${flip ? "timeline-end md:timeline-start md:text-end" : "timeline-end md:timeline-end"}`}
     >
+      {flip ? "true" : "false"}
       <time className="block text-sm mb-2">{time}</time>
       <div className="text-xl font-bold mb-2">{title}</div>
       <div className="text-md mb-2">{location}</div>
