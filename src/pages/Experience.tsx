@@ -1,3 +1,5 @@
+import Section from "../hoс/Section.tsx";
+
 const experiences = [
   {
     company: 'ООО "Судо"',
@@ -18,7 +20,8 @@ const experiences = [
       "TailwindCSS",
     ],
     link: "https://dev.sem.sudo.team/",
-    presentation: "https://docs.google.com/presentation/d/1PRtpg6nmerEbOIUADNI_p7DW7NVAYoi3/edit#slide=id.g2c141fd7554_0_68",
+    presentation:
+      "https://docs.google.com/presentation/d/1PRtpg6nmerEbOIUADNI_p7DW7NVAYoi3/edit#slide=id.g2c141fd7554_0_68",
   },
   {
     company: 'ООО "Судо"',
@@ -64,7 +67,9 @@ const ExperienceCard = ({
         {location} | {period}
       </p>
       {description.map((text, index) => (
-        <p key={index} className="whitespace-pre-line">{text}</p>
+        <p key={index} className="whitespace-pre-line">
+          {text}
+        </p>
       ))}
       <div className="mb-4">
         <strong>Стек:</strong>
@@ -76,14 +81,16 @@ const ExperienceCard = ({
           ))}
         </ul>
       </div>
-      {presentation && <a
-        href={presentation}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn btn-primary btn-outline"
-      >
-        Презентация проекта
-      </a>}
+      {presentation && (
+        <a
+          href={presentation}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-outline"
+        >
+          Презентация проекта
+        </a>
+      )}
       <a
         href={link}
         target="_blank"
@@ -96,9 +103,8 @@ const ExperienceCard = ({
   </div>
 );
 
-const ExperienceSection = () => (
-  <section className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold text-center mb-4">Опыт</h1>
+const Experience = () => (
+  <>
     <div className="flex flex-col justify-center items-center">
       {experiences.map((exp, index) => (
         <ExperienceCard
@@ -114,7 +120,9 @@ const ExperienceSection = () => (
         />
       ))}
     </div>
-  </section>
+  </>
 );
+
+const ExperienceSection = Section(Experience, "Опыт");
 
 export default ExperienceSection;

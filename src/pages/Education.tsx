@@ -1,3 +1,5 @@
+import Section from "../hoс/Section.tsx";
+
 const education = [
   {
     institution: "ИТМО",
@@ -5,7 +7,8 @@ const education = [
     period: "Сентябрь 2020 по Август 2024",
     location: "Санкт-Петербург",
     link: "https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm",
-    extra: "Из веба получено опыта: СУБД, Java (+Spring), Kotlin, сети, Vue, FreeMarker, JQuery",
+    extra:
+      "Из веба получено опыта: СУБД, Java (+Spring), Kotlin, сети, Vue, FreeMarker, JQuery",
     image: "ITMO.png",
   },
 ];
@@ -57,7 +60,7 @@ const EducationHero = ({
 
 const Education = () => {
   return (
-    <section className="flex flex-grow justify-center items-center h-full">
+    <>
       {education.map((edu, index) => (
         <EducationHero
           key={index}
@@ -70,8 +73,10 @@ const Education = () => {
           image={edu.image}
         />
       ))}
-    </section>
+    </>
   );
 };
 
-export default Education;
+const EducationSection = Section(Education, "Образование", true);
+
+export default EducationSection;

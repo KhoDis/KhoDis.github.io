@@ -1,7 +1,23 @@
 import Badge from "../components/Badge.tsx";
+import Section from "../hoс/Section.tsx";
 
-const languages = ["JavaScript", "TypeScript", "Java (+Spring)", "Kotlin (+Ktor)", "C++", "Python"];
-const frameworks = ["React", "Redux", "Redux Toolkit", "RTK Query", "redux-undo", "React Router", "Next.js"];
+const languages = [
+  "JavaScript",
+  "TypeScript",
+  "Java (+Spring)",
+  "Kotlin (+Ktor)",
+  "C++",
+  "Python",
+];
+const frameworks = [
+  "React",
+  "Redux",
+  "Redux Toolkit",
+  "RTK Query",
+  "redux-undo",
+  "React Router",
+  "Next.js",
+];
 const visualLibraries = ["Konva", "PIXI.js"];
 const technologies = ["WebSocket", "Vite", "PostgreSQL", "SQLite"];
 const versionControl = ["git", "GitHub", "GitLab"];
@@ -10,9 +26,9 @@ const tests = ["Jest"];
 const other = ["Figma"];
 
 const SkillSection = ({
-                        title,
-                        skills,
-                      }: {
+  title,
+  skills,
+}: {
   title: string;
   skills: string[];
 }) => (
@@ -28,23 +44,24 @@ const SkillSection = ({
 
 const Skills = () => {
   return (
-    <section className="flex items-center justify-center container mx-auto py-12">
-      <div className="">
-        <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
-        <p className="text-lg mb-8 text-center">These are the tools I used to make awesome projects!</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <SkillSection title="Languages" skills={languages} />
-          <SkillSection title="Frameworks" skills={frameworks} />
-          <SkillSection title="Visual Libraries" skills={visualLibraries} />
-          <SkillSection title="Technologies" skills={technologies} />
-          <SkillSection title="Version Control" skills={versionControl} />
-          <SkillSection title="CSS Frameworks" skills={cssFrameworks} />
-          <SkillSection title="Testing" skills={tests} />
-          <SkillSection title="Other" skills={other} />
-        </div>
+    <>
+      <p className="text-lg mb-8 text-center">
+        These are the tools I used to make awesome projects!
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <SkillSection title="Languages" skills={languages} />
+        <SkillSection title="Frameworks" skills={frameworks} />
+        <SkillSection title="Visual Libraries" skills={visualLibraries} />
+        <SkillSection title="Technologies" skills={technologies} />
+        <SkillSection title="Version Control" skills={versionControl} />
+        <SkillSection title="CSS Frameworks" skills={cssFrameworks} />
+        <SkillSection title="Testing" skills={tests} />
+        <SkillSection title="Other" skills={other} />
       </div>
-    </section>
+    </>
   );
 };
 
-export default Skills;
+const SkillsSection = Section(Skills, "Навыки");
+
+export default SkillsSection;
