@@ -76,14 +76,14 @@ function Navbar() {
       <div className="navbar-start lg:hidden">
         <Menu />
       </div>
-      <div className="navbar-center hidden lg:flex text-white"/>
+      <div className="navbar-center hidden lg:flex text-white" />
       <div className="navbar-center lg:hidden text-white">
         <Logo />
       </div>
       <div className="navbar-end hidden lg:flex text-white">
         <BigNav />
       </div>
-      <div className="navbar-end lg:hidden text-white"/>
+      <div className="navbar-end lg:hidden text-white" />
     </nav>
   );
 }

@@ -46,7 +46,8 @@ const Skills = () => {
   return (
     <>
       <p className="text-lg mb-4 text-center">
-        Вот инструменты, которыми я пользовался, чтобы создавать классные проекты!
+        Вот инструменты, которыми я пользовался, чтобы создавать классные
+        проекты!
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-2 lg:w-3/4 mx-auto">
         <SkillSection title="Языки" skills={languages} />
