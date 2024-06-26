@@ -54,7 +54,6 @@ const TimelineItem = ({
     <div
       className={`timeline-box p-6 rounded-lg shadow-lg bg-white ${flip ? "timeline-end md:timeline-start md:text-end" : "timeline-end md:timeline-end"}`}
     >
-      {flip ? "true" : "false"}
       <time className="block text-sm mb-2">{time}</time>
       <div className="text-xl font-bold mb-2">{title}</div>
       <div className="text-md mb-2">{location}</div>
