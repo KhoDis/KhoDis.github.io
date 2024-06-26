@@ -26,7 +26,9 @@ const TimelineItem = ({
 }: TimelineItemProps) => (
   <li>
     {index > 0 && <hr className="bg-primary" />}
-    <div className={`${(flip ? "timeline-start md:timeline-end" : "timeline-start md:text-end")}`}>
+    <div
+      className={`${flip ? "timeline-start md:timeline-end" : "timeline-start md:text-end"}`}
+    >
       {image && (
         <div className="my-4">
           <img
@@ -63,9 +65,7 @@ const TimelineItem = ({
         </p>
       ))}
       {stack && (
-        <ul
-          className={`flex flex-wrap ${flip && "md:flex-row-reverse"} gap-2 mb-2`}
-        >
+        <ul className={`flex flex-wrap ${flip && "md:justify-end"} gap-2 mb-2`}>
           {stack.map((skill, index) => (
             <Badge key={index} skill={skill} />
           ))}
@@ -77,8 +77,22 @@ const TimelineItem = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-content hover:underline"
+            className={`text-primary-content hover:underline items-center flex gap-1 flex-row ${flip && "md:justify-end"}`}
           >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+              />
+            </svg>
             {link}
           </a>
         </p>
