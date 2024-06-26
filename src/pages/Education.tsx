@@ -1,5 +1,6 @@
 import Section from "../hoс/Section.tsx";
 import { education } from "../data.ts";
+import Badge from "../components/Badge.tsx";
 
 type EducationProps = {
   institution: string;
@@ -7,7 +8,7 @@ type EducationProps = {
   period: string;
   location: string;
   link: string;
-  extra: string;
+  stack: string[];
   image: string;
 };
 
@@ -17,7 +18,7 @@ const EducationHero = ({
   period,
   location,
   link,
-  extra,
+  stack,
   image,
 }: EducationProps) => (
   <div className="hero">
@@ -32,7 +33,14 @@ const EducationHero = ({
         <p>{degree}</p>
         <p>{location}</p>
         <p>{period}</p>
-        <p>{extra}</p>
+        <p>
+          Из веба получены знания:{" "}
+          <span className="flex flex-wrap gap-2">
+            {stack.map((s) => (
+              <Badge key={s} skill={s} />
+            ))}
+          </span>
+        </p>
         <a
           href={link}
           target="_blank"
@@ -57,7 +65,7 @@ const Education = () => {
           period={edu.period}
           location={edu.location}
           link={edu.link}
-          extra={edu.extra}
+          stack={edu.stack}
           image={edu.image}
         />
       ))}

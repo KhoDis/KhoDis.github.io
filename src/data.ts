@@ -15,8 +15,17 @@ export const education = [
     period: "Сентябрь 2020 по Август 2024",
     location: "Санкт-Петербург",
     link: "https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm",
-    extra:
-      "Из веба получено опыта: СУБД, Java (+Spring), Kotlin, сети, Vue, FreeMarker, JQuery",
+    stack: [
+      "СУБД",
+      "JavaScript",
+      "многопоточность",
+      "сети",
+      "Java (+Spring)",
+      "Kotlin",
+      "Vue",
+      "FreeMarker",
+      "JQuery",
+    ],
     image: "ITMO.png",
   },
 ];
@@ -70,7 +79,7 @@ export const projects = [
     link: "https://github.com/KhoDis/generative-pixel-art",
     period: "Сентябрь 2023 по текущий день",
     stack: [
-      "React.js",
+      "React",
       "TypeScript",
       "TailwindCSS",
       "DaisyUI",
